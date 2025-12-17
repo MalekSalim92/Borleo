@@ -2,11 +2,13 @@ public with sharing class HttpClient {
     private String namedCredentials;
     private String endpoint;
     private Map<String,String> headers;
+    private Integer timeout;
 
     public HttpClient(String namedCredentials , String endpoint) {
         this.namedCredentials = namedCredentials;
         this.endpoint = endpoint;
         this.headers = new Map<String,String>();
+        this.timeout = 120000;
     }
     public HttpResponse get(){
        return send('GET',null);
@@ -38,7 +40,10 @@ public with sharing class HttpClient {
         return this;
     }
 
-
+    public HttpClient setTimeout(Integer timeout){
+        this.timeout = timeout;
+        return this;
+    }
     
 
 
