@@ -5,5 +5,11 @@
     "**/.sf": true,
     "**/.sfdx": true
   },
-  "xml.preferences.showSchemaDocumentationType": "none"
+  "xml.preferences.showSchemaDocumentationType": "none",
+  "salesforce.einsteinForDevelopers.enableAutocompletionsByFileType": {
+    "apex": false,
+    "javascript": true,
+    "css": true,
+    "html": true
+  }
 }
